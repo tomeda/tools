@@ -33,7 +33,7 @@
       /* ── Floating toolbar (hidden on print) ───────────── */
       #offer-toolbar {
         position: fixed;
-        top: 0;
+        top: 54px;
         left: 0;
         right: 0;
         z-index: 9999;
@@ -77,7 +77,7 @@
       }
 
       /* ── Push content below toolbar ───────────────────── */
-      body { padding-top: 46px; }
+      body { padding-top: 100px; }
 
       /* ── Print: hide toolbar & buttons ───────────────── */
       @media print {
@@ -134,9 +134,6 @@
 
         <div class="right">
           <div class="top-space"></div>
-          <div class="logo">
-            <img data-logo="{company_logo}" />
-          </div>
           <div class="clearfix"></div>
 
           <section id="client-info">
@@ -197,10 +194,6 @@
             <th>{amount_subtotal_label}</th>
             <td>{amount_subtotal}</td>
           </tr>
-          <tr data-iterate="tax">
-            <th>{tax_name}</th>
-            <td>{tax_value}</td>
-          </tr>
           <tr class="amount-total">
             <th>{amount_total_label}</th>
             <td>{amount_total}</td>
@@ -210,13 +203,14 @@
 
       <div class="clearfix"></div>
 
-      <!-- Bank details -->
+      <!-- Bank details + VAT exemption -->
       <div id="bank-details">
         <div class="bank-title">Начин на плащане</div>
         <div>Банка: ЦКБ АД</div>
         <div>BIC: CECBBGSF</div>
         <div>IBAN: BG50 CECB 9790 10I0 5426 00</div>
         <div>Валута: EUR</div>
+        <div style="margin-top:8px; color:#BA334D; font-style:italic;">Основание за неначисляване на ДДС: чл.113 ал.9 от ЗДДС</div>
       </div>
 
       <div class="clearfix"></div>
