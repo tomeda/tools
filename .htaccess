@@ -1,0 +1,35 @@
+# ── ТОМЕДА ОФЕРТА - Security ──────────────────────────────────────────────────
+
+# Block direct access to JSON data files
+<FilesMatch "\.(json)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access only to expected file types
+Options -Indexes
+
+# Block access to node.js and package files (not needed on server)
+<FilesMatch "^(node\.js|package\.json|package-lock\.json|\.gitignore)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect this .htaccess file
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Enable compression for faster loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                "access plus 1 week"
+    ExpiresByType application/javascript  "access plus 1 week"
+    ExpiresByType image/png               "access plus 1 month"
+</IfModule>
