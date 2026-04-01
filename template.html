@@ -56,7 +56,7 @@
         margin-right: 6px;
       }
       #offer-toolbar .spacer { flex: 1; }
-      #offer-toolbar button {
+      #offer-toolbar .btn {
         padding: 6px 16px;
         border: none;
         border-radius: 3px;
@@ -64,8 +64,10 @@
         font-size: 13px;
         font-weight: bold;
         transition: opacity .2s;
+        text-decoration: none;
+        display: inline-block;
       }
-      #offer-toolbar button:hover { opacity: .85; }
+      #offer-toolbar .btn:hover { opacity: .85; }
       #btn-pdf       { background: #36663E; color: #fff; }
       #btn-print     { background: #555;    color: #fff; }
       #btn-increment { background: #BA334D; color: #fff; }
@@ -93,9 +95,9 @@
       <span class="offer-badge" id="offer-badge">…</span>
       <span>ТОМЕДА ОФЕРТА</span>
       <span class="spacer"></span>
-      <button id="btn-pdf"       onclick="downloadPDF()">💾 Запази PDF</button>
-      <button id="btn-print"     onclick="window.print()">🖨️ Печат</button>
-      <button id="btn-increment" onclick="incrementOffer()">➕ Следваща оферта</button>
+      <span id="btn-pdf"       class="btn" onclick="downloadPDF()">💾 Запази PDF</span>
+      <span id="btn-print"     class="btn" onclick="window.print()">🖨️ Печат</span>
+      <span id="btn-increment" class="btn" onclick="incrementOffer()">➕ Следваща оферта</span>
       <span id="toolbar-status"></span>
     </div>
 

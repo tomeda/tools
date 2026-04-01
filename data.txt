@@ -223,7 +223,7 @@ true
 false
 
 [lang]
-bg
+en
 
 
 ### Items (in this order item_description@||@item_quantity@||@item_price@||@item_discount@||@item_tax)
