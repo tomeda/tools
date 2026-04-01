@@ -1,0 +1,19 @@
+# Node.js — not needed on cPanel server
+node_modules/
+node.js
+package.json
+package-lock.json
+
+# Design source files — not needed on server
+AI/
+EPS/
+
+# Old duplicate folder
+offers/
+
+# Misc
+Fonts used.txt
+LICENSE.html
+*.log
+.DS_Store
+Thumbs.db
