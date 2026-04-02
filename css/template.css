@@ -107,17 +107,17 @@ b, strong {
   padding: 7px 35px;
 }
 #memo .color1 {
-  background: #BA334D;
+  background: #2980B9;
 }
 #memo .color1.padding {
   padding-top: 35px;
   padding-bottom: 10px;
 }
 #memo .color2 {
-  background: #36663E;
+  background: #7F8C8D;
 }
 #memo .color3 {
-  background: #798F72;
+  background: #BDC3C7;
 }
 #memo .company-info .name {
   font-weight: bold;
@@ -183,7 +183,7 @@ b, strong {
   font-size: 40px;
   margin: 70px 0 20px 35px;
   float: left;
-  color: #BA334D;
+  color: #2980B9;
 }
 #invoice-title-number #title {
   margin-right: 5px;
@@ -208,31 +208,54 @@ table th, table td {
 }
 
 #items .first-cell, #items table th:first-child, #items table td:first-child {
-  width: 18px;
-  text-align: right;
+  width: 5%;
+  text-align: left;
 }
 #items table {
   border-collapse: separate;
   width: 100%;
-  border-bottom: 1px solid #BA334D;
+  border-bottom: 1px solid #2980B9;
 }
 #items table th {
   font-weight: bold;
   color: #231F20;
-  padding: 12px 10px;
+  padding: 12px 5px;
   text-align: right;
-  border-bottom: 3px solid #BA334D;
+  border-bottom: 3px solid #2980B9;
 }
 #items table th:nth-child(2) {
-  width: 30%;
+  width: 35%;
   text-align: left;
 }
+#items table th:nth-child(3) {
+  width: 13%;
+  text-align: left;
+}
+#items table th:nth-child(4) {
+  width: 8%;
+  text-align: center;
+}
+#items table th:nth-child(5) {
+  width: 13%;
+  text-align: right;
+}
+#items table th:nth-child(6) {
+  width: 7%;
+  text-align: right;
+}
+#items table th:nth-child(7) {
+  width: 7%;
+  text-align: right;
+}
 #items table th:last-child {
+  width: 12%;
   text-align: right;
 }
 #items table td {
-  padding: 15px 10px;
+  padding: 15px 5px;
   text-align: right;
+  font-size: 13px;
+  line-height: 1.4;
 }
 #items table td:first-child {
   text-align: left;
@@ -240,11 +263,22 @@ table th, table td {
 #items table td:nth-child(2) {
   text-align: left;
 }
+#items table td:nth-child(3) {
+  text-align: left;
+}
+#items table td:nth-child(4) {
+  text-align: center;
+}
 
 #sums {
   float: right;
   margin-top: 30px;
   page-break-inside: avoid;
+  break-inside: avoid;
+}
+#sums table {
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 #sums table {
   text-transform: uppercase;
@@ -262,17 +296,17 @@ table th, table td {
   font-size: 16px;
 }
 #sums table tr.amount-total th {
-  color: #BA334D;
+  color: #2980B9;
 }
 #sums table tr.amount-total th, #sums table tr.amount-total td {
   font-weight: bold;
-  border-top: 3px solid #BA334D;
+  border-top: 3px solid #2980B9;
 }
 #sums table tr:last-child {
   font-size: 16px;
 }
 #sums table tr:last-child th {
-  color: #BA334D;
+  color: #2980B9;
 }
 #sums table tr:last-child th, #sums table tr:last-child td {
   font-weight: bold;
@@ -311,15 +345,15 @@ padding:20px 0;
   float: left;
 }
 .bottom-stripe .color1-bottom {
-  background: #BA334D;
+  background: #2980B9;
   width: 273px;
 }
 .bottom-stripe .color2-bottom {
-  background: #36663E;
+  background: #7F8C8D;
   width: 274px;
 }
 .bottom-stripe .color3-bottom {
-  background: #798F72;
+  background: #BDC3C7;
   width: 273px;
 }
 
@@ -346,7 +380,7 @@ ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  border-left: 4px solid #BA334D;
+  border-left: 4px solid #2980B9;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: left !important;
   margin-top: 30px;
@@ -361,7 +395,7 @@ ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull
 }
 .modern-client-info .client-name {
   font-size: 16px;
-  color: #BA334D;
+  color: #2980B9;
   margin-bottom: 8px;
 }
 .modern-client-info .client-details div {
@@ -382,7 +416,7 @@ ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull
   outline: none;
 }
 .measure-select:focus {
-  border-color: #BA334D;
+  border-color: #2980B9;
 }
 
 /**
@@ -402,8 +436,9 @@ ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull
   }
   .modern-client-info {
     box-shadow: none;
-    background: transparent;
-    padding: 0;
-    border-left: none;
+    background: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact;
+    padding: 15px;
+    border-left: 4px solid #2980B9 !important;
   }
 }
