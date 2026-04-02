@@ -138,14 +138,16 @@
           <div class="top-space"></div>
           <div class="clearfix"></div>
 
-          <section id="client-info">
-            <span>{bill_to_label}</span>
-            <div><b><span>{client_name}</span></b></div>
-            <div><span>{client_address}</span></div>
-            <div><span>{client_city_zip_state}</span></div>
-            <div><span>{client_phone_fax}</span></div>
-            <div><span>{client_email}</span></div>
-            <div><span>{client_other}</span></div>
+          <section id="client-info" class="modern-client-info">
+            <div class="client-label"><span>{bill_to_label}</span></div>
+            <div class="client-details">
+              <div class="client-name"><b><span>{client_name}</span></b></div>
+              <div><span>{client_address}</span></div>
+              <div><span>{client_city_zip_state}</span></div>
+              <div><span>{client_phone_fax}</span></div>
+              <div><span>{client_email}</span></div>
+              <div><span>{client_other}</span></div>
+            </div>
           </section>
         </div>
 
@@ -172,6 +174,7 @@
           <tr>
             <th>{item_row_number_label}</th>
             <th>{item_description_label}</th>
+            <th class="col-measure">Мярка</th>
             <th>{item_quantity_label}</th>
             <th>{item_price_label}</th>
             <th>{item_discount_label}</th>
@@ -181,6 +184,14 @@
           <tr data-iterate="item">
             <td>{item_row_number}</td>
             <td>{item_description}</td>
+            <td class="col-measure">
+              <select class="measure-select">
+                <option value="/месец">/месец</option>
+                <option value="/еднократно">/еднократно</option>
+                <option value="/час">/час</option>
+                <option value="/бр.">/бр.</option>
+              </select>
+            </td>
             <td>{item_quantity}</td>
             <td>{item_price}</td>
             <td>{item_discount}</td>
@@ -195,6 +206,10 @@
           <tr>
             <th>{amount_subtotal_label}</th>
             <td>{amount_subtotal}</td>
+          </tr>
+          <tr data-iterate="tax">
+            <th>{tax_name}</th>
+            <td>{tax_value}</td>
           </tr>
           <tr class="amount-total">
             <th>{amount_total_label}</th>
@@ -230,8 +245,8 @@
     </div><!-- /#container -->
 
     <!-- ── Scripts ──────────────────────────────────────── -->
-    <!-- Invoicebus generator (CDN — includes all dependencies) -->
-    <script src="https://1dd265088a6cef288739-152492db8df9591a73e16991ac6a30fb.ssl.cf2.rackcdn.com/generator/generator.min.js?data=true"></script>
+    <!-- Local Generator -->
+    <script src="generator/generator.min.js?data=true"></script>
 
     <!-- html2pdf for client-side PDF export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous"></script>

@@ -323,14 +323,87 @@ padding:20px 0;
   width: 273px;
 }
 
+ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull_right.ib_lang_select,ib-span.ib_gray_link.ib_how_to_link.ib_pull_right,ib-span#ib-save-data-btn.ib_default_button,ib-span.ib_default_button.ib_highlight_editable, .ib_invoice_commands_wrap .ib_invoice_commands .ib_default_button.ib_save_online, .ib_invoice_commands_wrap .ib_invoice_commands .ib_default_button.ib_open_data {
+    display: none;
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  #container { padding: 10px 20px; }
+  .left, .right { float: none !important; margin: 0 auto; }
+  #memo .color1, #memo .color2, #memo .color3 { max-width: 100%; text-align: center; margin-bottom: 20px; }
+  #invoice-info > div > label, #invoice-info > div > span { float: none; text-align: center; }
+  #client-info { text-align: left; margin-top: 30px; }
+  #invoice-title-number { margin: 30px 0; float: none; text-align: center; }
+  #issue_date { float: none; text-align: center; margin: 0 0 20px 0; }
+  #items table th, #items table td { font-size: 11px; padding: 8px 4px; }
+  #sums { float: none; width: 100%; margin-top: 20px; }
+  #sums table { width: 100%; }
+}
+
+/* Modern Client Info styling */
+.modern-client-info {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #BA334D;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left !important;
+  margin-top: 30px;
+  min-width: 280px;
+}
+.modern-client-info .client-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.modern-client-info .client-name {
+  font-size: 16px;
+  color: #BA334D;
+  margin-bottom: 8px;
+}
+.modern-client-info .client-details div {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Measure select styling */
+.measure-select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+.measure-select:focus {
+  border-color: #BA334D;
+}
+
 /**
  * If the printed invoice is not looking as expected you may tune up
  * the print styles (you can use !important to override styles)
  */
 @media print {
   /* Here goes your print styles */
-}
-
-ib-span.ib_invoicebus_love,ib-span.ib_top_separator.ib_pull_right,select.ib_pull_right.ib_lang_select,ib-span.ib_gray_link.ib_how_to_link.ib_pull_right,ib-span#ib-save-data-btn.ib_default_button,ib-span.ib_default_button.ib_highlight_editable, .ib_invoice_commands_wrap .ib_invoice_commands .ib_default_button.ib_save_online, .ib_invoice_commands_wrap .ib_invoice_commands .ib_default_button.ib_open_data {
-    display: none;
+  .measure-select {
+    border: none;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    color: #000;
+  }
+  .modern-client-info {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    border-left: none;
+  }
 }
